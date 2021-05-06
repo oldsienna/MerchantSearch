@@ -20,6 +20,10 @@ class Migration(migrations.Migration):
                 ('country_code', models.CharField(max_length=2, verbose_name='country code')),
                 ('created', models.DateField(verbose_name='created')),
             ],
+            options={
+                'verbose_name': 'Manufacturer',
+                'verbose_name_plural': 'Manufacturers',
+            },
         ),
         migrations.CreateModel(
             name='Car',
