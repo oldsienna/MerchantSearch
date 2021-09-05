@@ -25,7 +25,7 @@ SECRET_KEY = 'h2%%w^!n#(ce9#p)&jf6_%-fje*b^zi+t=i&4picrkp^$e!z_c'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -87,7 +87,7 @@ DATABASES = {
         'NAME': 'postgres',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
-        'HOST': '127.0.0.1',
+        'HOST': 'db',
         'PORT': '5432',
     }
 }
@@ -134,6 +134,6 @@ STATIC_URL = '/static/'
 # Elasticsearch configuration
 ELASTICSEARCH_DSL = {
     'default': {
-        'hosts': '127.0.0.1:9200'
+        'hosts': 'elasticsearch:9200'
     },
 }

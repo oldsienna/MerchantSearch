@@ -3,6 +3,10 @@ from django.utils.translation import gettext_lazy as _
 
 
 class Manufacturer(models.Model):
+    class Meta:
+        verbose_name = _('Manufacturer')
+        verbose_name_plural = _('Manufacturers')
+
     name = models.CharField(
         _('name'),
         max_length=100,
@@ -14,6 +18,12 @@ class Manufacturer(models.Model):
     created = models.DateField(
         _('created'),
     )
+
+    def __str__(self):
+        return self.name
+
+    def get_auction_title(self):
+        return '{} - {}'.format(self.name, self.color)
 
 
 class Car(models.Model):
